@@ -7,7 +7,7 @@ import { DashboardPage } from "./pages/DashboardPage";
 import { RequestFood } from "./components/request-food";
 import { PostAvailability } from "./components/post-availability";
 import { VolunteerTransport } from "./components/volunteer-transport";
-import { LogOut, Home, Star, FileText, BookOpen, Menu, X, Search, User as UserIcon, Leaf } from "lucide-react";
+import { LogOut, Home, Star, FileText, BookOpen, Menu, X, Search, User as UserIcon, Leaf, Package, HandPlatter, Truck } from "lucide-react";
 import { useState } from "react";
 import { Toaster } from "sonner";
 import { AppreciationPage } from "./pages/AppreciationPage";
@@ -22,6 +22,9 @@ function AppContent() {
 
   const navItems = [
     { label: "Home",      path: "/dashboard",   icon: Home,     roles: ["donor", "receiver", "volunteer"] },
+    { label: "Donate",    path: "/donate",      icon: Package,  roles: ["donor"] },
+    { label: "Requests",  path: "/requests",    icon: HandPlatter, roles: ["receiver"] },
+    { label: "Transport", path: "/transport",   icon: Truck,    roles: ["volunteer"] },
     { label: "Discover",  path: "/appreciation", icon: Star,     roles: ["donor", "receiver", "volunteer"] },
     { label: "Contracts", path: "/contracts",   icon: FileText, roles: ["donor", "receiver"] },
     { label: "Guide",     path: "/guide",       icon: BookOpen, roles: ["donor", "receiver", "volunteer"] },
